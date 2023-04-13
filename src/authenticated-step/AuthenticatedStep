@@ -1,0 +1,16 @@
+import {Cookies} from 'aurelia-plugins-cookies';
+import {Redirect} from 'aurelia-router';
+
+export class AuthorizeStep {
+  run(navigationInstruction, next) {
+    if (navigationInstruction.getAllInstructions().some(i => i.config.settings.secured)) {
+      let mycooki = Cookies.getAll();
+      if (!mycooki.token) {
+        console.log('به این صفحه دسترسی ندارید');
+        return next.cancel(new Redirect('home'));
+      }
+      console.log('به این صفحه دسترسی دارید');
+    }
+    return next();
+  }
+}

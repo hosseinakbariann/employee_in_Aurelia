@@ -1,0 +1,119 @@
+{
+  "name": "aurelia1",
+  "type": "project:application",
+  "bundler": {
+    "id": "webpack",
+    "displayName": "Webpack"
+  },
+  "build": {
+    "options": {
+      "server": "dev",
+      "extractCss": "prod",
+      "coverage": false
+    }
+  },
+  "platform": {
+    "id": "web",
+    "displayName": "Web",
+    "hmr": false,
+    "open": false,
+    "port": 8080,
+    "output": "dist"
+  },
+  "loader": {
+    "id": "none",
+    "displayName": "None"
+  },
+  "transpiler": {
+    "id": "babel",
+    "displayName": "Babel",
+    "fileExtension": ".js"
+  },
+  "markupProcessor": {
+    "id": "minimum",
+    "displayName": "Minimal Minification",
+    "fileExtension": ".html"
+  },
+  "cssProcessor": {
+    "id": "none",
+    "displayName": "None",
+    "fileExtension": ".css"
+  },
+  "jsonProcessor": {
+    "id": "none",
+    "displayName": "None",
+    "fileExtension": ".json"
+  },
+  "editor": {
+    "id": "webstorm",
+    "displayName": "WebStorm"
+  },
+  "unitTestRunners": [],
+  "integrationTestRunner": {
+    "id": "none",
+    "displayName": "None"
+  },
+  "paths": {
+    "root": "src",
+    "resources": "resources",
+    "elements": "resources/elements",
+    "attributes": "resources/attributes",
+    "valueConverters": "resources/value-converters",
+    "bindingBehaviors": "resources/binding-behaviors"
+  },
+  "packageManager": "npm",
+  "dependencies": [
+    "aurelia-history-browser",
+    "aurelia-http-client",
+    "aurelia-loader",
+    "jquery",
+    {
+      "name": "aurelia-cookie",
+      "path": "../node_modules/aurelia-cookie/dist/amd",
+      "main": "index"
+    },
+    {
+      "name": "aurelia-validation",
+      "path": "../node_modules/aurelia-validation/dist/amd",
+      "main": "aurelia-validation"
+    },
+    {
+      "name": "bootstrap",
+      "path": "../node_modules/bootstrap/dist",
+      "main": "js/bootstrap.bundle.min",
+      "deps": [
+        "jquery"
+      ],
+      "exports": "$",
+      "resources": [
+        "css/bootstrap.css"
+      ]
+    },
+    {
+      "name": "aurelia-dialog",
+      "path": "../node_modules/aurelia-dialog/dist/amd",
+      "main": "aurelia-dialog",
+      "resources": ["resources/*.js"]
+    },
+    {
+      "name": "aurelia-store",
+      "path": "../node_modules/aurelia-store/dist/amd",
+      "main": "aurelia-store"
+    },
+    {
+      "name": "rxjs",
+      "main": "./index.js",
+      "path": "../node_modules/rxjs"
+    },
+    {
+      "name": "rxjs/operators",
+      "main": "./index.js",
+      "path": "../node_modules/rxjs/operators"
+    },
+    {
+      "name": "aurelia-plugins-cookies",
+      "path": "../node_modules/aurelia-plugins-cookies/dist/amd",
+      "main": "aurelia-plugins-cookies"
+    }
+  ]
+}

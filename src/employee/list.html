@@ -1,0 +1,94 @@
+<template>
+  <template>
+    <router-view></router-view>
+  </template>
+
+  <require from="../resources/css/bootstrap.min.css"></require>
+  <require from="../resources/css/style.css"></require>
+  <require from="../resources/css/panel.css"></require>
+  <require from="../resources/css/style-rtl.alpha6.min.css"></require>
+  <!--<require from="../resources/elements/custom-alert"></require>-->
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="company-brand d-flex align-items-center">
+          <img class="imgbrand" src="../resources/images/beats-logo.png">
+          <a class="navbar-brand" href="#">نماینده محصولات بیتس</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">صفحه اصلی </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">پروفایل</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/changepass">تغییر رمز عبور</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/employee/list">کارمندان</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/employee/register">ثبت کارکند</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pointer" click.delegate = "logout()">خروج</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Website Body -->
+  <div class="container-fluid">
+    <div class="row registration-page">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h5 class="login-header"><img class="icon-pic" src="../resources/images/user-plus-icon.png">لیست کارمندان</h5>
+          </div>
+
+          <div class="panel-body">
+            <!-- registration form -->
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead class="thead-red">
+                <tr>
+                  <th scope="col">شماره شناسایی</th>
+                  <th scope="col">شماره کاربر ثبت کننده</th>
+                  <th scope="col">نام کاربری</th>
+                  <th scope="col">ایمیل</th>
+                  <th scope="col">ویرایش</th>
+                </tr>
+                </thead>
+                <tbody class="table-body">
+                  <tr repeat.for="userRecord of UserRecords">
+                    <td>${userRecord.id}</td>
+                    <td>${userRecord.parent}</td>
+                    <td>${userRecord.data.username}</td>
+                    <td>${userRecord.data.email}</td>
+                    <td><button class="btn btn-warning"><a href.bind=`/employee/${userRecord.id}`>ویرایش</a></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+            <!--<div class="alert alert-danger alert-dismissable" role="alert">-->
+                <!--خطا در ارسال اطلاعات-->
+            <!--</div>-->
+       <custom-alert></custom-alert>
+      </div>
+    </div>
+  </div>
+
+</template>

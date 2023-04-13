@@ -1,0 +1,60 @@
+.search-form .input-group {
+  float: right !important;
+  transition: all 0.35s, border-radius 0s;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border: 1px solid #fff;
+}
+.search-form .input-group input.form-control {
+  margin-left: -25px;
+  border:none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-left: 1.5rem;
+}
+
+.search-form .input-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .input-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .input-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .input-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+.search-form .input-group:hover,
+.search-form .input-group.hover {
+  width: 100%;
+  border-radius: 25px 25px 25px 25px;
+}
+
+.search-form .input-group span.form-control-feedback {
+  position: absolute;
+  top: -5px;
+  bottom: 0px;
+  right: -2px;
+  left: 5px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #000;
+  left: initial;
+  font-size: 16px;
+}
+.input-group.span{
+    vertical-align: middle !important;
+}

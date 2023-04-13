@@ -1,0 +1,62 @@
+<template>
+  <require from="../resources/attributes/tool-tip"/></require>
+  <ux-dialog>
+    <ux-dialog-body>
+      <h5 class="login-header"><img class="icon-pic" src="../resources/images/user-plus-icon.png">ثبت نام</h5>
+    </ux-dialog-body>
+
+    <ux-dialog-footer>
+      <form class="form-horizontal" role = "form">
+        <div class="form-group" validation-errors.bind="usernameErrors" class.bind="usernameErrors.length? 'has-error' : ''">
+          <div class="row">
+            <input data-toggle="tooltip" tool-tip="title" title.bind="usernametooltip" type="text" class="input-form-login" id="username" value.bind="username & validate" placeholder = "نام کاربری">
+            <span class="formvalidationerror" repeat.for="errorInfo of usernameErrors">
+                    ${errorInfo.error.message}
+                  </span>
+          </div>
+        </div>
+        <div class="form-group" validation-errors.bind="passwordErrors" class.bind="passwordErrors.length? 'has-error' : ''">
+          <div class="row">
+            <input data-toggle="tooltip" tool-tip="title" title.bind="passwordtooltip" type = "password" class="input-form-login" id="password"  value.bind = "password & validate" placeholder = "رمز عبور">
+            <span class="formvalidationerror" repeat.for="errorInfo of passwordErrors">
+                    ${errorInfo.error.message}
+                  </span>
+          </div>
+        </div>
+        <div class="form-group"  validation-errors.bind="idNumberErrors"
+             class.bind="idNumberErrors.length ? 'has-error' : ''">
+          <div class="row">
+            <input data-toggle="tooltip" tool-tip="title" title.bind="idnumbertooltip" type = "text" class="input-form-login" id="idNumber"  value.bind = "idNumber & validate" placeholder = "شماره شناسایی">
+            <span class="formvalidationerror" repeat.for="errorInfo of idNumberErrors">
+                    ${errorInfo.error.message}
+                  </span>
+          </div>
+        </div>
+        <div class="form-group"  validation-errors.bind="emailErrors"
+             class.bind="emailErrors.length ? 'has-error' : ''">
+          <div class="row">
+            <input data-toggle="tooltip" tool-tip="title" title.bind="emailtooltip" type = "text" class="input-form-login" id="email"  value.bind = "email & validate" placeholder = "ایمیل">
+            <span class="formvalidationerror" repeat.for="errorInfo of emailErrors">
+                    ${errorInfo.error.message}
+                  </span>
+          </div>
+        </div>
+        <div class="row formerror">
+          ${formresponse}
+        </div>
+        <div class="row formsuccess">
+          ${succesresponse}
+        </div>
+        <div class="form-row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <button type="submit" class="button-submit pointer" click.delegate = "postsignup()" >ثبت نام
+            </button>
+          </div>
+        </div>
+      </form>
+    </ux-dialog-footer>
+  </ux-dialog>
+
+</template>

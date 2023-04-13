@@ -1,0 +1,104 @@
+<template>
+  <template>
+    <router-view></router-view>
+  </template>
+
+  <require from="../resources/css/bootstrap.min.css"></require>
+  <require from="../resources/css/style.css"></require>
+  <require from="../resources/css/panel.css"></require>
+  <require from="../resources/css/style-rtl.alpha6.min.css"></require>
+  <require from="../resources/elements/alert"></require>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="company-brand d-flex align-items-center">
+          <img class="imgbrand" src="../resources/images/beats-logo.png">
+          <a class="navbar-brand" href="#">نماینده محصولات بیتس</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">صفحه اصلی </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">پروفایل</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/changepass">تغییر رمز عبور</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/employee/list">کارمندان</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/employee/register">ثبت کارکند</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Website Body -->
+  <div class="container-fluid">
+    <div class="row registration-page">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <br><br>
+        <alert response.bind="message" responsecolor.bind="messagecolor"></alert>
+        <br><br>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h5 class="login-header"><img class="icon-pic" src="../resources/images/user-plus-icon.png">ویرایش</h5>
+          </div>
+
+          <div class="panel-body">
+            <!-- registration form -->
+            <!--<form class="form-horizontal" role = "form" repeat.for="userRecord of UserRecords">-->
+            <form class="form-horizontal" role = "form">
+              <div class="form-horizontal">
+                <div class="form-group">
+                  <div class="row">
+                    <label class="label-form" for="username">نام کاربری:</label>
+                    <input type="text" class="input-form-profile col-12" id="username" value.bind = "UserRecords.data.username">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <label class="label-form " for="email">ایمیل:</label>
+                  <input type="text" class="input-form-profile col-12" id="email" placeholder="ایمیل" value.bind = "UserRecords.data.email">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <label class="label-form " for="id">شماره کارمندی:</label>
+                  <input type="text" class="input-form-profile col-12" id="id" value.bind = "UserRecords.id">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <label class="label-form " for="parent">شماره کاربر ثبت کننده:</label>
+                  <input type="text" class="input-form-profile col-12" id="parent" value.bind = "UserRecords.parent">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                  <button type="submit" class="button-submit pointer" click.delegate = "Editinformation()" >ثبت
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

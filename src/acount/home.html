@@ -1,0 +1,193 @@
+<template>
+  <require from="../resources/css/bootstrap.min.css"></require>
+  <require from="../resources/css/style.css"></require>
+  <require from="../resources/css/panel.css"></require>
+  <require from="../resources/css/style-rtl.alpha6.min.css"></require>
+  <require from="../resources/elements/alert"></require>
+  <require from="../resources/elements/success-alert"></require>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="company-brand d-flex align-items-center">
+          <img class="imgbrand" src="../resources/images/beats-logo.png">
+          <a class="navbar-brand" href="#">نماینده محصولات بیتس</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">صفحه اصلی </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pointer" click.trigger = "signup()">ثبت نام</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pointer" click.trigger = "login()">ورود</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Website Body -->
+  <div class="container-fluid first-page">
+    <!-- image slider -->
+    <div class="row">
+      <img class="sliderimage" src="../resources/images/slider.png">
+    </div>
+    <br><br>
+
+    <!-- Left and right controls -->
+    <div class="container userinformation-box">
+      <!-- Button to Open the Modal -->
+      <!-- Button to Open the Modal -->
+      <h4 class="user-header">نمایش کاربران</h4><br><br>
+      <p>
+        لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب‌بندی برای پر کردن صفحه و ارائه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می‌نماید، تا از نظر گرفایکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخصت از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه‌ طراحی یا صفحه‌بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده است. از آنجایی که طراحان عموماً نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
+      </p><br>
+      <form class="">
+        <div class="row">
+          <div class="form-group form-table col-sm-2">
+            <label class="search-label"><b>جستجو براساس: </b></label>
+          </div>
+          <div class="form-group form-table col-sm-3">
+            <label><b>شماره ملی </b></label>
+            <input type="text" class="input-form">
+          </div>
+          <div class="form-group form-table col-sm">
+            <label><b>نام</b></label>
+            <input type="text" class="input-form"></span>
+          </div>
+          <div class="form-group form-table col-sm">
+            <label><b>شعبه </b></label>
+            <span><input type="text" class="input-form-small"></span>
+          </div>
+          <div class="form-group form-table col-sm-2">
+            <input type="button" href="#" class="button-search pointer" value="جستجو">
+          </div>
+        </div>
+      </form>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead class="thead-red">
+          <tr>
+            <th scope="col">نام و نام خانوادگی </th>
+            <th scope="col">شماره ملی</th>
+            <th scope="col">جنسیت</th>
+            <th scope="col">تحصیلات</th>
+            <th scope="col">مهارت</th>
+            <th scope="col">عنوان شغلی</th>
+            <th scope="col">شعبه</th>
+          </tr>
+          </thead>
+          <tbody class="table-body">
+          <tr>
+            <th scope="col">ناصر اشرفی</th>
+            <th scope="col">0948574523</th>
+            <th scope="col">مرد</th>
+            <th scope="col">کاردانی</th>
+            <th scope="col">طراح رابط کاربری</th>
+            <th scope="col">گرافیست</th>
+            <th scope="col">مشهد</th>
+          </tr>
+          <tr>
+            <th scope="col">مهران ارجمند</th>
+            <th scope="col">0949854125</th>
+            <th scope="col">مرد</th>
+            <th scope="col">کارشناسی</th>
+            <th scope="col">طراح رابط کاربری</th>
+            <th scope="col">برنامه نویس</th>
+            <th scope="col">مشهد</th>
+          </tr>
+          <tr>
+            <th scope="col">مصطفی حسینی</th>
+            <th scope="col">0944587462</th>
+            <th scope="col">مرد</th>
+            <th scope="col">کارشناسی</th>
+            <th scope="col">طراح رابط کاربری</th>
+            <th scope="col">برنامه نویس</th>
+            <th scope="col">مشهد</th>
+          </tr>
+          <tr>
+            <th scope="col">ناصر اشرفی</th>
+            <th scope="col">0948574523</th>
+            <th scope="col">مرد</th>
+            <th scope="col">کاردانی</th>
+            <th scope="col">طراح رابط کاربری</th>
+            <th scope="col">گرافیست</th>
+            <th scope="col">مشهد</th>
+          </tr>
+          <tr>
+            <th scope="col">مهران ارجمند</th>
+            <th scope="col">0949854125</th>
+            <th scope="col">مرد</th>
+            <th scope="col">کارشناسی</th>
+            <th scope="col">طراح رابط کاربری</th>
+            <th scope="col">برنامه نویس</th>
+            <th scope="col">مشهد</th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- BEGIN FOOTER -->
+  <div class="footer">
+    <div class="footerabout">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">7 روز هفته، 24 ساعته پاسخگوی شما هستیم.</div>
+          <div class="col-sm-2 colfooter">021-6193000 |021-95119095<img class="footerabout-icon" src="../resources/images/phone-icon.png"></div>
+          <div class="col-sm-2 colfooter">سؤالات متداول<img class="footerabout-icon" src="../resources/images/question-icon.png"></div>
+          <div class="col-sm-2 colfooter">info@digikala.com<img class="footerabout-icon" src="../resources/images/envelope-icon.png"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footernav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 ">
+            <ul> <h6 class="footerh">راهنمای خرید از دی جی کالا</h6>
+              <li class="list-footer"><a href="#">ثبت سفارش</a></li>
+              <li class="list-footer"><a href="#">رویه های ارسال سفارش</a></li>
+              <li class="list-footer"><a href="#">شیوه های پرداخت</a></li>
+              <li class="list-footer"><a href="#">معرفی دی جی بن</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul><h6 class="footerh">خدمات مشتریان</h6>
+              <li class="list-footer"><a href="#">پاسخ به پرسش های متداول</a></li>
+              <li class="list-footer"><a href="#">رویه های بازگرداندن کالا</a></li>
+              <li class="list-footer"><a href="#">شرایط اختصاصی</a></li>
+              <li class="list-footer"><a href="#">حریم خصوصی</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 subscribform">
+            <h6 class="footerh">از جدیدترین تخفیف های دی جی کالا باخبر شوید</h6>
+            <div class="row">
+              <input class="input-placeholder" type="text" placeholder="آدرس ایمیل خود را وارد کنید">
+              <input class="btn-primary" type="button" value="تأیید ایمیل" >
+            </div>
+            <div class="social-footer">
+              <a href="#" class="soc-icon"><img src="../resources/images/instagram-icon.png"></a>
+              <a href="#" class="soc-icon"><img src="../resources/images/linkedin-icon.png"></a>
+              <a href="#" class="soc-icon"><img src="../resources/images/twitter-icon.png"></a>
+              <a href="#" class="soc-icon"><img src="../resources/images/google-plus.png"></a>
+              <a href="#" class="soc-icon"><img src="../resources/images/telegram-icon.png"></a>
+              <a href="#" class="soc-icon"><img src="../resources/images/facebook-icon.png"></a>
+              <img class="play-icon" src="../resources/images/appstore.jpg"> <img class="play-icon" src="../resources/images/cafebazaar.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
